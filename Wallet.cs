@@ -6,7 +6,7 @@ public class Wallet : MonoBehaviour
     private int _coins;
     public bool AllCoinsCollected { get; private set; } = false;
 
-    public void GetCoin()
+    public void TakeCoin()
     {
         _coins++;
 
