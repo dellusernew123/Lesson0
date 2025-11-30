@@ -10,7 +10,7 @@ public class Game : MonoBehaviour
     [SerializeField] private Timer _timer;
     [SerializeField] private Wallet _wallet;
 
-    private bool _isGameStopped = false;
+    private bool _isStopped = false;
 
     private void Update()
     {
@@ -23,12 +23,12 @@ public class Game : MonoBehaviour
     
     public void StopGame(bool isWin)
     {
-        if (_isGameStopped == false)
+        if (_isStopped == false)
         {
             Debug.Log(isWin ? _winMessage : _loseMessage);
             _player.SetActive(false);
-            _isGameStopped = true;
-            _timer.StopTheGame();
+            _isStopped = true;
+            _timer.Stop();
         }
     }
 }
