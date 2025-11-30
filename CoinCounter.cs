@@ -15,7 +15,7 @@ public class CoinCounter : MonoBehaviour
 
         if (coin != null)
         {
-            _wallet.GetCoin();
+            _wallet.TakeCoin();
             coin.gameObject.SetActive(false);
         }
     }
