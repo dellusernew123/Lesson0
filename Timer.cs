@@ -4,12 +4,12 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private float _time = 20f;
 
-    private bool _gameHasStopped = false;
+    private bool _isStopped = false;
     public bool TimeIsUp { get; private set; } = false;
 
     private void Update()
     {
-        if (_time <= 0 || _gameHasStopped == true)
+        if (_time <= 0 || _isStopped == true)
             return;     
 
         Debug.Log($"Оставшееся время:{_time}");
@@ -20,8 +20,8 @@ public class Timer : MonoBehaviour
             TimeIsUp = true;
     }
 
-    public void StopTheGame()
+    public void Stop()
     {
-        _gameHasStopped = true;
+        _isStopped = true;
     }
 }
